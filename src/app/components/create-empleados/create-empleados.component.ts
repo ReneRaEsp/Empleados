@@ -23,7 +23,19 @@ export class CreateEmpleadosComponent implements OnInit {
   }
 
   agregarEmpleado() {
-    console.log('crear formulario');
+    this.submitted = true;
+    if(this.createEmpleado.invalid){
+      return;
+    }
+    const empleado: any = {
+      nombre: this.createEmpleado.value.nombre,
+      apellido: this.createEmpleado.value.apellido,
+      documento: this.createEmpleado.value.documento,
+      salario: this.createEmpleado.value.salario,
+      fechaCreacion: new Date(),
+      fechaActualizacion: new Date()      
+    }
+    console.log(empleado);
   }
 
 }
