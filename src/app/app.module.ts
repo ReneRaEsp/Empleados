@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
 //components
 import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
@@ -25,7 +26,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
