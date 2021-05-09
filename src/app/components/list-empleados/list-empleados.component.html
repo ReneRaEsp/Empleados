@@ -1,9 +1,9 @@
 <div class="container mt-4">
     <div class="card">
         <div class="card-body">
-            <span class="h1">Listado de Empleados</span>
-            <button routerLink="/create-empleado" class="btn btn-md btn-info 
-            text-light float-end">
+            <span class="h3">Listado de Empleados</span>
+            <button routerLink="/create-empleado" class="btn btn-md text-light 
+            btn-success float-end">
                 Agregar
             </button>
             <table 
@@ -21,43 +21,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Tomas</td>
-                    <td>Perez</td>
-                    <td>232224</td>
-                    <td>30000</td>
-                    <td><i class="fas fa-edit text-info"></i></td>
-                    <td><i class="fas fa-trash-alt text-danger"></i></td>
-                  </tr>
-                  <tr>
-                    <td>Tomas</td>
-                    <td>Perez</td>
-                    <td>232224</td>
-                    <td>30000</td>
-                    <td><i class="fas fa-edit text-info"></i></td>
-                    <td><i class="fas fa-trash-alt text-danger"></i></td>
-                  </tr>
-                  <tr>
-                    <td>Tomas</td>
-                    <td>Perez</td>
-                    <td>232224</td>
-                    <td>30000</td>
-                    <td><i class="fas fa-edit text-info"></i></td>
-                    <td><i class="fas fa-trash-alt text-danger"></i></td>
-                  </tr>
-                  <tr>
-                    <td>Tomas</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td><i class="fas fa-edit text-info"></i></td>
-                    <td><i class="fas fa-trash-alt text-danger"></i></td>
-                  </tr>
-                  <tr>
-                    <td>Tomas</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
+                  <tr
+                  *ngFor="let empleado of empleados"
+                  >
+                    <td>{{empleado.nombre}}</td>
+                    <td>{{empleado.apellido}}</td>
+                    <td>{{empleado.documento}}</td>
+                    <td>{{empleado.salario}}</td>
                     <td><i class="fas fa-edit text-info"></i></td>
                     <td><i class="fas fa-trash-alt text-danger"></i></td>
                   </tr>
