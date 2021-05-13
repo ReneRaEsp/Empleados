@@ -27,9 +27,9 @@
                     <td>{{empleado.nombre}}</td>
                     <td>{{empleado.apellido}}</td>
                     <td>{{empleado.documento}}</td>
-                    <td>{{empleado.salario}}</td>
-                    <td><i class="fas fa-edit text-info"></i></td>
-                    <td><i class="fas fa-trash-alt text-danger"></i></td>
+                    <td>{{empleado.salario | currency}}</td>
+                    <td><i [routerLink]="['/edit-empleado/', empleado.id]" class="fas fa-edit text-info"></i></td>
+                    <td><i (click)="eliminarEmpleado(empleado.id)" class="fas fa-trash-alt text-danger"></i></td>
                   </tr>
                 </tbody>
             </table>
